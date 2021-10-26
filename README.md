@@ -51,7 +51,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | _Element_ | _Descripció_ |
 | --- | --- |
 | /peticioEnviamentAssentament/idEnviament | Identificador de l&#39;enviament en el sistema origen. |
-| /peticioEnviamentAssentament/enviament | XML corresponent al missatge SICRES3 de l&#39;assentament codificat com a CDATA.<br><br> Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat Error: Reference source not found d&#39;aquest document. |
+| /peticioEnviamentAssentament/enviament | XML corresponent al missatge SICRES3 de l&#39;assentament codificat com a CDATA.<br><br> Per més detalls sobre l&#39;estructura del XML [consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.](https://github.com/ConsorciAOC/SIR-2.0#3111-enviament-sicres3) |
 
 ![1](captures/1.png)
 
