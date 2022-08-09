@@ -3,9 +3,32 @@ Documentació per integrar-se al servei SIR – Sistema de Interconexión de Reg
 
 
 **Índex**
+- [1. Introducció](#1)
+- [2. Transmissions de dades disponibles](#2)
+- [3. Missatgeria del servei](#3)
+   * [3.1 3.1 Enviament d&#39;un intercanvi](#3.1)
+        * [3.1.1 Petició – dades específiques](#3.1.1)
+			* [3.1.1.1 Enviament (SICRES3)](#3.1.1.1)
+		* [3.1.2 Petició – dades genèriques](#3.1.2)
+		* [3.1.3 Resposta – dades específiques](#3.1.3)		
+   * [3.2 Confirmació d&#39;un intercanvi rebut](#3.2)
+        * [3.2.1 Petició – dades específiques](#3.2.1)
+		* [3.2.2 Resposta – dades específiques](#3.2.2)
+   * [3.3 Rebuig d&#39;un intercanvi rebut](#3.3)
+		* [3.3.1 Petició – dades específiques](#3.3.1)
+		* [3.3.2 Resposta – dades específiques](#3.3.2)
+   * [3.4 Reenviament d&#39;un intercanvi rebut](#3.4)
+		* [3.4.1 Petició – dades específiques](#3.4.1)
+		* [3.4.2 Resposta – dades específiques](#3.4.2)
+   * [3.5 Consulta de dades d&#39;un intercanvi](#3.5)
+		* [3.5.1 Petició – dades específiques](#3.5.1)
+		* [3.5.2 Resposta – dades específiques](#3.5.2)
+   * [3.6 Sincronització d&#39;intercanvis](#3.6)
+		* [3.6.1 Petició – dades específiques](#3.6.1)
+		* [3.6.2 Resposta – dades específiques](#3.6.2)
 
 
-# 1 Introducció
+# 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de publicació del _Sistema de Interconexión de Registros_ del MINHAP (en endavant SIR).
 
@@ -15,7 +38,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 - _Manual de Integración con la Plataforma SIR (COD. SIR10021)_ per conèixer el protocol d&#39;intercanvi d&#39;assentaments.
 - BOE: _Resolución de 19 de julio de 2011, de la Secretaría de Estado para la Función Pública, por la que se aprueba la Norma Técnica de Interoperabilidad de Modelo de Datos para el Intercambio de asientos entre las entidades registrales_ que defineix la norma tècnica SICRES (Sistema de Información Común de Registros de Entrada y Salida).
 
-# 2 Transmissions de dades disponibles
+# 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les operacions disponibles a través del servei són les que es presenten a continuació:
 
@@ -40,13 +63,13 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 ```
 ---
 
-# 3 Missatgeria del servei
+# 3 Missatgeria del servei <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
-## 3.1 Enviament d&#39;un intercanvi
+## 3.1 Enviament d&#39;un intercanvi <a name="3.1"></a>
 
-### 3.1.1 Petició – dades específiques
+### 3.1.1 Petició – dades específiques <a name="3.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -55,7 +78,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![1](captures/1.png)
 
-#### 3.1.1.1 Enviament (SICRES3)
+#### 3.1.1.1 Enviament (SICRES3) <a name="3.1.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -92,7 +115,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | //De\_Formulario\_Generico/Expone | Exposició dels fets i antecedents relacionats amb la sol·licitud. |
 | //De\_Formulario\_Generico/Solicita | Descripció de l&#39;objecte de la sol·licitud. |
 
-### 3.1.2 Petició – dades genèriques
+### 3.1.2 Petició – dades genèriques <a name="3.1.2"></a>
 
 #### Per cada document referenciat a la sol·licitud d&#39;enviament d&#39;assentament cal informar un bloc de dades *//Ficheros/Fichero* de les dades genèriques de la sol·licitud.
 
@@ -108,7 +131,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
  ---
 
-### 3.1.3 Resposta – dades específiques
+### 3.1.3 Resposta – dades específiques <a name="3.1.3"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -120,9 +143,9 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![2](captures/2.png)
 
-## 3.2 Confirmació d&#39;un intercanvi rebut
-
-### 3.2.1 Petició – dades específiques
+## 3.2 Confirmació d&#39;un intercanvi rebut <a name="3.2"></a>
+ 
+### 3.2.1 Petició – dades específiques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -131,7 +154,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![3](captures/3.png)
 
-### 3.2.2 Resposta – dades específiques
+### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
 ![4](captures/4.png)
 
@@ -143,9 +166,9 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
  | /respostaConfirmacioAssentament/resultat/codiResultat | Codi de resultat de la operació:<li>0: confirmació realitzada correctament.<li> 502: error realitzant la confirmació.|
 | /respostaConfirmacioAssentament /resultat/descripcio | Descripció del resultat de la operació. |
 
-## 3.3 Rebuig d&#39;un intercanvi rebut
+## 3.3 Rebuig d&#39;un intercanvi rebut <a name="3.3"></a>
 
-### 3.3.1 Petició – dades específiques
+### 3.3.1 Petició – dades específiques <a name="3.3.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -155,7 +178,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![5](captures/5.png)
 
-### 3.3.2 Resposta – dades específiques
+### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 ![6](captures/6.png)
 
@@ -165,9 +188,9 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | /respostaRebuigAssentament/resultat/codiResultat | Codi de resultat de la operació:<li> 0: rebuig realitzat correctament.<li> 502: error realitzant el rebuig. |
 | /respostaRebuigAssentament /resultat/descripcio | Descripció del resultat de la operació. |
 
-## 3.4 Reenviament d&#39;un intercanvi rebut
+## 3.4 Reenviament d&#39;un intercanvi rebut <a name="3.4"></a>
 
-### 3.4.1 Petició – dades específiques
+### 3.4.1 Petició – dades específiques <a name="3.4.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -177,8 +200,8 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![7](captures/7.png)
 
-### 3.4.2 Resposta – dades específiques
-
+### 3.4.2 Resposta – dades específiques <a name="3.4.2"></a>
+ 
 ![8](captures/8.png)
 
 | _Element_ | _Descripció_ |
@@ -188,9 +211,9 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | /respostaReenviamentAssentament/resultat/codiResultat | Codi de resultat de la operació:<li> 0: reenviament realitzat correctament.<li> 502: error realitzant el reenviament. |
 | /respostaReenviamentAssentament /resultat/descripcio | Descripció del resultat de la operació. |
 
-## 3.5 Consulta de dades d&#39;un intercanvi
+## 3.5 Consulta de dades d&#39;un intercanvi <a name="3.5"></a>
 
-### 3.5.1 Petició – dades específiques
+### 3.5.1 Petició – dades específiques <a name="3.5.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -199,7 +222,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![9](captures/9.png)
 
-### 3.5.2 Resposta – dades específiques
+### 3.5.2 Resposta – dades específiques <a name="3.5.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -242,9 +265,9 @@ __¹__ URL de descàrrega a producció: https://serveis3.app.aoc.cat/CAOC-PCI30-
 
 ![10](captures/10.png)
 
-## 3.6 Sincronització d&#39;intercanvis
-
-### 3.6.1 Petició – dades específiques
+## 3.6 Sincronització d&#39;intercanvis <a name="3.6"></a>
+ 
+### 3.6.1 Petició – dades específiques <a name="3.6.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -253,7 +276,7 @@ __¹__ URL de descàrrega a producció: https://serveis3.app.aoc.cat/CAOC-PCI30-
 
 ![11](captures/11.png)
 
-### 3.6.2 Resposta – dades específiques
+### 3.6.2 Resposta – dades específiques <a name="3.6.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
