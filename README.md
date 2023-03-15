@@ -260,6 +260,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 ----
 
 __¹__ URL de descàrrega a producció: https://serveis3.app.aoc.cat/CAOC-PCI30-MC-SIR/descarrega?guid=<GUID>
+__¹__ URL de descàrrega a preproducció: https://serveis3-pre.app.aoc.cat/CAOC-PCI30-MC-SIR/descarrega?guid=<GUID>
 
 ---
 
